@@ -1,9 +1,16 @@
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
+
+    const links = <>
+        <li><NavLink>Home</NavLink></li>
+        <li><NavLink>Add Movies</NavLink></li>
+        <li><NavLink>Statistics</NavLink></li>
+    </>
     return (
         <div className="max-w-[1920px] mx-auto">
-            <div className="navbar bg-red-500">
+            <div className="navbar bg-violet-500 px-12 py-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,32 +30,18 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            {
+                                links
+                            }
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Orchid</a>
+                    <a className="text-3xl font-semibold shadow-sm p-1 rounded-lg">Orchid</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
+                    <ul className="menu menu-horizontal px-1 gap-3">
+                       {
+                        links
+                       }
                     </ul>
                 </div>
                 <div className="navbar-end">
