@@ -8,6 +8,11 @@ import {
 } from "react-router-dom";
 import Error from './Pages/Error';
 import Root from './Root';
+import Movies from './Pages/Movies';
+import AddMovies from './Pages/AddMovies';
+import Statistics from './Pages/Statistics';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +23,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/movies",
+        element: <Movies></Movies>,
+      },
+      {
+        path: "/addMovies",
+        element: <AddMovies></AddMovies>,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
     ]
   },
