@@ -13,6 +13,7 @@ import AddMovies from './Pages/AddMovies';
 import Statistics from './Pages/Statistics';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
+    <Toaster position="top-right" />
   </StrictMode>,
 )
