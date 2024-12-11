@@ -24,33 +24,7 @@ Live Site: [Live Website URL](#)
 - **State Management**: Context API
 - **UI Components**: react-simple-star-rating, Toast Notifications (react-toastify or sweetalert2)
 
-## 📂 Project Structure
 
-```
-Movie-Portal/
-│-- client/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   ├── MovieCard.jsx
-│   │   │   └── Spinner.jsx
-│   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   ├── AddMovie.jsx
-│   │   │   ├── MovieDetails.jsx
-│   │   │   ├── AllMovies.jsx
-│   │   │   └── Favorites.jsx
-│   │   └── App.js
-│   └── .env
-│-- server/
-│   ├── routes/
-│   │   └── movies.js
-│   ├── models/
-│   │   └── Movie.js
-│   ├── server.js
-│   └── .env
-```
 
 ## 📝 How to Run the Project
 
