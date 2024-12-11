@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { FaStar } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const AddMovies = () => {
     const [movieData, setMovieData] = useState({
         poster: "",
         title: "",
-        duration: "",
+        duration: 60,
         rating: 0,
         summary: "",
         genre: "Comedy",
@@ -48,11 +49,14 @@ const AddMovies = () => {
         }
 
         // Duration validation
-        const durationPattern = /^(\d+h\s*)?(\d+m(in)?)?$/;
+        const durationPattern = /^\d+$/;
+
         if (!movieData.duration) {
             errors.duration = "Duration is required.";
         } else if (!durationPattern.test(movieData.duration)) {
-            errors.duration = "Please enter a valid duration format (e.g., 2h 30min, 1h, 45min).";
+            errors.duration = "Please enter a valid duration in minutes (e.g., 90, 120).";
+        } else if (parseInt(movieData.duration, 10) <= 60) {
+            errors.duration = "Duration must be greater than 60 minutes.";
         }
 
         // Rating validation
@@ -88,8 +92,26 @@ const AddMovies = () => {
             errorKeys.map(key => toast.error(errors[key]))
             return;
         }
+        console.log(movieData);
 
-        console.log("Form data is valid:", movieData);
+        fetch('http://localhost:5000/movies', {
+            method: 'POST',
+            headers: {'content-type' : 'application/json'},
+            body: JSON.stringify(movieData)
+        })
+        .then(res => res.json())
+        .then(data=> {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
+
     };
 
 
