@@ -14,6 +14,7 @@ import Statistics from './Pages/Statistics';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import { Toaster } from 'react-hot-toast';
+import Details from './Pages/Details';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,15 @@ const router = createBrowserRouter([
       {
         path: "/addMovies",
         element: <AddMovies></AddMovies>,
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader: async({params})=>{
+          const res = await fetch('http://localhost:5000/movies')
+          const data = await res.json()
+          return data?.find(item => item?._id === params?.id)
+        }
       },
       {
         path: "/statistics",
