@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 const Details = () => {
     const movie = useLoaderData();
     const [movies, setMovies] = useState(movie)
+    const [selected, setSelected] = useState([]);
     const navigate = useNavigate()
     const { _id, poster, genre, title, duration, releaseYear, rating, summary } = movie;
 
@@ -34,7 +35,7 @@ const Details = () => {
                                 icon: "success"
                             });
                             navigate('/movies')
-                            
+
                             const remaining = movies.filter(mov => mov._id !== id)
                             setMovies(remaining)
                         }
@@ -43,6 +44,13 @@ const Details = () => {
             }
         });
     }
+
+    const handleSelected = (movie) => {
+        const isExist = selected.find(m => m._id === movie._id)
+        const newMovie = [...selected, movie];
+        setSelected(newMovie)
+    }
+
     const handleClick = () => {
         navigate('/movies')
     }
@@ -65,7 +73,7 @@ const Details = () => {
                         <p className='text-lg font-medium'>Release Year: <span className='text-red-500 font-semibold'>{releaseYear}</span></p>
                         <div className="card-actions">
                             <button onClick={() => handleDelete(_id)} className="btn bg-red-500 text-white">Delete Movie</button>
-                            <button className="btn bg-red-500 text-white">Add to Favorite</button>
+                            <button onClick={() => handleSelected(movie)} className="btn bg-red-500 text-white">Add to Favorite</button>
                         </div>
                         <div className="card-actions justify-end mt-14">
                             <button onClick={handleClick} className="btn btn-neutral">See All Movies</button>

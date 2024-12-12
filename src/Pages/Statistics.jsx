@@ -1,9 +1,46 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 const Statistics = () => {
+    const [movies, setMovies] = useState([])
+
+    useEffect(() => {
+        // fetch('http://localhost:5000/movies')
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         setMovies(data);
+        //     })
+        //     .catch(err => {
+        //         console.log(err);
+        //     })
+
+        axios.get('http://localhost:5000/movies')
+            .then(data => {
+                const movieData = data.data;
+                const movieWithData = movieData.map(movie => {
+                    const obj = {
+                        name: movie.title,
+                        Duration: parseInt(movie.duration),
+                    }
+                    return obj;
+                })
+                console.log(movieWithData);
+
+                setMovies(movieWithData)
+            })
+    }, [])
+
     return (
-        <div>
-            stat
+        <div className='min-h-screen mx-auto'>
+            <h2>Movies: {movies.length}</h2>
+            <div className='flex flex-col items-center justify-center my-12'>
+                <BarChart width={600} height={400} data={movies}>
+                    <Bar dataKey="Duration" fill="#8884d8" />
+                    <XAxis dataKey={name}></XAxis>
+                    <YAxis></YAxis>
+                </BarChart>
+            </div>
         </div>
     );
 };

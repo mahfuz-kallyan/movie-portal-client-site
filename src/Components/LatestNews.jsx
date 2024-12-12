@@ -1,0 +1,51 @@
+import pic1 from '../assets/images/image1.jpg'
+import pic2 from '../assets/images/image2.jpg'
+import pic3 from '../assets/images/image3.jpg'
+const LatestNews = () => {
+    return (
+        <div className='my-12 space-y-8 lg:p-14 relative mx-auto '>
+            <h2 className='text-4xl font-semibold text-center'>Latest News</h2>
+            <div className='flex gap-8 flex-col lg:flex-row justify-center items-center'>
+                <div className='w-1/2 relative'>
+                    <img className='rounded-2xl' src={pic1} alt="" />
+                    <div className='absolute left-4 bottom-8   lg:bottom-24 lg:left-14'>
+                        <h3 className='text-2xl font-medium text-red-500'>Latest News</h3>
+                        <p className='text-sm '>Latest and upcoming news</p>
+                    </div>
+                </div>
+                <div className='w-1/2 space-y-4'>
+                    <div className="card card-side bg-gray-200 shadow-xl">
+                        <figure>
+                            <img className='w-60  px-4'
+                                src={pic2}
+                                alt="Movie" />
+                        </figure>
+                        <div className="card-body">
+                            <h2 className="card-title">New news is released!</h2>
+                            <p>Click the button to watch the news.</p>
+                            <div className="card-actions justify-end">
+                                <button className="btn bg-red-500 text-white">Watch</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card card-side bg-gray-200 shadow-xl">
+                        <figure>
+                            <img className='w-60 h-60 p-4 rounded-lg '
+                                src={pic3}
+                                alt="Movie" />
+                        </figure>
+                        <div className="card-body">
+                            <h2 className="card-title">New news is released!</h2>
+                            <p>Click the button to watch the news.</p>
+                            <div className="card-actions justify-end">
+                                <button className="btn bg-red-500 text-white">Watch</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default LatestNews;

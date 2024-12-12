@@ -15,6 +15,7 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import { Toaster } from 'react-hot-toast';
 import Details from './Pages/Details';
+import MyFavorites from './Pages/MyFavorites';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
           const data = await res.json()
           return data?.find(item => item?._id === params?.id)
         }
+      },
+      {
+        path: "/favorites",
+        element: <MyFavorites></MyFavorites>,
       },
       {
         path: "/statistics",
