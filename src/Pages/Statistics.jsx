@@ -6,14 +6,6 @@ const Statistics = () => {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        // fetch('http://localhost:5000/movies')
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         setMovies(data);
-        //     })
-        //     .catch(err => {
-        //         console.log(err);
-        //     })
 
         axios.get('http://localhost:5000/movies')
             .then(data => {

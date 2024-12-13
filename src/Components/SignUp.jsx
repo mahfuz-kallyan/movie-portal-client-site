@@ -7,7 +7,7 @@ const SignUp = () => {
             <div>
                 <div className="join">
                     <input className="input input-bordered join-item " placeholder="Email" />
-                    <button className="btn join-item rounded-r-full text-red-500">Subscribe</button>
+                    <button className="btn join-item rounded-r-full text-red-500 bg-gray-800">Subscribe</button>
                 </div>
             </div>
         </div>

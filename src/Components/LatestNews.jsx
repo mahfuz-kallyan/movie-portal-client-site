@@ -14,7 +14,7 @@ const LatestNews = () => {
                     </div>
                 </div>
                 <div className='w-1/2 space-y-4'>
-                    <div className="card card-side bg-gray-200 shadow-xl">
+                    <div className="card card-side bg-gray-300 shadow-xl">
                         <figure>
                             <img className='w-60  px-4'
                                 src={pic2}
@@ -28,7 +28,7 @@ const LatestNews = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card card-side bg-gray-200 shadow-xl">
+                    <div className="card card-side bg-gray-300 shadow-xl">
                         <figure>
                             <img className='w-60 h-60 p-4 rounded-lg '
                                 src={pic3}

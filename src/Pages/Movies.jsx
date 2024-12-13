@@ -6,7 +6,7 @@ const Movies = () => {
     return (
         <div>
            <h2 className="text-center text-3xl font-semibold py-14">All Movies</h2>
-           <div className="p-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 space-y-12">
+           <div className="p-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
                 movies.map(movie=> <MovieCard key={movie._id} movie={movie}></MovieCard>)
             }

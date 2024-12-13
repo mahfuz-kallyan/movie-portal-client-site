@@ -1,14 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const MovieCard = ({ movie, isFavorite = false, deleteFavorite }) => {
-    const navigate = useNavigate()
-    const { _id, poster, genre, title, duration, releaseYear, rating } = movie;
-
-    const handleClick = () => {
-        navigate(`/details/${_id}`)
-    }
-
+const FeaturedMovie = ({ movie }) => {
+    const { poster, genre, title, duration, releaseYear, rating } = movie;
     return (
         <div className="card card-compact bg-base-100 w-96 h-auto shadow-2xl space-y-4 border justify-between pt-4">
             <figure className='flex-grow overflow-hidden'>
@@ -25,17 +18,13 @@ const MovieCard = ({ movie, isFavorite = false, deleteFavorite }) => {
                 </p>
                 <p className='text-lg font-medium'>Rating: <span className='text-red-500 font-semibold'>{rating}</span></p>
                 <div className="card-actions justify-center">
-                    {
-                        isFavorite ? <>
-                            <button onClick={handleClick} className="btn bg-red-500 text-white">See Details</button>
-                            <button onClick={() => deleteFavorite(_id)} className="btn bg-red-500 text-white">See Remove Favorite</button>
-                        </>
-                            : <button onClick={handleClick} className="btn bg-red-500 text-white">See Details</button>
-                    }
+                    <button className="btn bg-red-500 text-white">See Details</button>
+                    <button className="btn bg-red-500 text-white">See Details</button>
+
                 </div>
             </div>
         </div>
     );
 };
 
-export default MovieCard;
+export default FeaturedMovie;
