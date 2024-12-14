@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 
 const Login = () => {
-    const { userLogin, setUser } = useContext(AuthContext)
+    const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
     console.log(location);
@@ -21,10 +21,22 @@ const Login = () => {
             .then(result => {
                 setUser(result.user);
                 navigate(location?.state ? location.state : "/")
+                e.target.reset()
             })
             .catch(err => {
                 toast.error(err.message);
             })
+    }
+
+    const handleGoogle=()=>{
+        signInWithGoogle()
+        .then(result=> {
+            setUser(result.user)
+            navigate(location?.state ? location.state : "/")
+        })
+        .catch(err =>{
+            toast.error(err.message)
+        })
     }
 
     return (
@@ -59,7 +71,7 @@ const Login = () => {
                         </div>
                     </form>
                     <p className='p-4'>Don't have an account? Please <NavLink to="/register"><strong className='text-blue-700 underline'>Register</strong></NavLink></p>
-                    <p><button className='btn btn-ghost'>Sign in with Google</button></p>
+                    <p><button onClick={handleGoogle} className='btn btn-ghost'>Sign in with Google</button></p>
                 </div>
             </div>
         </div>

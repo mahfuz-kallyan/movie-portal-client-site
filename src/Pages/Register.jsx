@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 
 const Register = () => {
-    const {createUser, setUser}= useContext(AuthContext)
+    const {createUser, setUser, signInWithGoogle}= useContext(AuthContext)
     const [error, setError] = useState({})
     const navigate = useNavigate();
 
@@ -38,6 +38,17 @@ const Register = () => {
         })
         .catch(err => {
             toast.error(err.message, 'Registration failed')
+        })
+    }
+
+    const handleGoogle=()=>{
+        signInWithGoogle()
+        .then(result=> {
+            setUser(result.user)
+            navigate(location?.state ? location.state : "/")
+        })
+        .catch(err =>{
+            toast.error(err.message)
         })
     }
 
@@ -89,7 +100,7 @@ const Register = () => {
                         </div>
                     </form>
                     <p className='p-4'>Have you an account? Please <NavLink to="/login"><strong className='text-blue-700 underline'>Login</strong></NavLink></p>
-                        <p><button className='btn btn-ghost'>Sign in with Google</button></p>
+                        <p><button onClick={handleGoogle} className='btn btn-ghost'>Sign in with Google</button></p>
                 </div>
             </div>
         </div>
