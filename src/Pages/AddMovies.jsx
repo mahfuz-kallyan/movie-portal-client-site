@@ -92,7 +92,6 @@ const AddMovies = () => {
             errorKeys.map(key => toast.error(errors[key]))
             return;
         }
-        console.log(movieData);
 
         fetch('http://localhost:5000/movies', {
             method: 'POST',

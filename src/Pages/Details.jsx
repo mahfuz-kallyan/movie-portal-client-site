@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { saveMovieToFavorite } from '../utilities/localStorage';
 
 const Details = () => {
     const movie = useLoaderData();
     const [movies, setMovies] = useState(movie)
-    // const [selected, setSelected] = useState([]);
     const navigate = useNavigate()
     const { _id, poster, genre, title, duration, releaseYear, rating, summary } = movie;
 
@@ -46,15 +45,11 @@ const Details = () => {
         });
     }
 
-    // const handleSelected = (movie) => {
-    //     const isExist = selected.find(m => m._id === movie._id)
-    //     const newMovie = [...selected, movie];
-    //     setSelected(newMovie)
-    // }
 
     const handleClick = () => {
         navigate('/movies')
     }
+   
     return (
         <div className='py-14'>
             <h2 className='text-center text-3xl font-semibold my-12'>Movie Details</h2>
@@ -77,6 +72,7 @@ const Details = () => {
                             <button onClick={() => saveMovieToFavorite(_id)} className="btn bg-red-500 text-white">Add to Favorite</button>
                         </div>
                         <div className="card-actions justify-end mt-14">
+                            {/* <Link to={`/updateMovies/${_id}`} className='btn btn-neutral'>Update Movie</Link> */}
                             <button onClick={handleClick} className="btn btn-neutral">See All Movies</button>
                         </div>
                     </div>

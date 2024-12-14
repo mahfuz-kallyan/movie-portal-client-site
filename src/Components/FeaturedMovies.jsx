@@ -3,7 +3,6 @@ import FeaturedMovie from './FeaturedMovie';
 
 const FeaturedMovies = () => {
     const [movies, setMovies] = useState([]);
-console.log(movies);
 
     useEffect(() => {
         fetch('http://localhost:5000/featured')
