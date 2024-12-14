@@ -1,11 +1,16 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 
 const Login = () => {
     const { userLogin, setUser } = useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location);
+    
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -13,12 +18,13 @@ const Login = () => {
         const password = form.password.value;
         console.log('form sign in', email, password);
         userLogin(email, password)
-        .then(result=>{
-            setUser(result.user);
-        })
-        .catch(err =>{
-            toast.error(err.message);
-        })
+            .then(result => {
+                setUser(result.user);
+                navigate(location?.state ? location.state : "/")
+            })
+            .catch(err => {
+                toast.error(err.message);
+            })
     }
 
     return (

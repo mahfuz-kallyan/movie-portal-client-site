@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 const Register = () => {
     const {createUser, setUser}= useContext(AuthContext)
     const [error, setError] = useState({})
+    const navigate = useNavigate();
 
     const validatePassword = (password) => {
         const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -33,6 +34,7 @@ const Register = () => {
         createUser(email, password)
         .then(result => {
             setUser(result.user)
+            navigate("/")
         })
         .catch(err => {
             toast.error(err.message, 'Registration failed')
