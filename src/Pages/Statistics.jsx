@@ -7,7 +7,7 @@ const Statistics = () => {
 
     useEffect(() => {
 
-        axios.get('http://localhost:5000/movies')
+        axios.get('https://movie-portal-server-self-zeta.vercel.app/movies')
             .then(data => {
                 const movieData = data.data;
                 const movieWithData = movieData.map(movie => {

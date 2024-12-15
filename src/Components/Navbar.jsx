@@ -50,6 +50,9 @@ const {user, logOut} = useContext(AuthContext)
                 </div>
                 
                 <div className="navbar-end gap-3">
+                    <div>
+                    <input type="checkbox" value="dark" className="toggle theme-controller" />
+                    </div>
                    {
                     user && user.email?<button onClick={logOut}  className="btn bg-white text-red-500">Logout</button> : <Link to="/login" className="btn bh-white text-red-500">Login</Link>
                    }

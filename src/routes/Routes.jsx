@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
         {
           path: "/movies",
           element: <Movies></Movies>,
-          loader: () => fetch('http://localhost:5000/movies')
+          loader: () => fetch('https://movie-portal-server-self-zeta.vercel.app/movies')
         },
         {
           path: "/addMovies",
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
           path: "/details/:id",
           element: <Details></Details>,
           loader: async ({ params }) => {
-            const res = await fetch('http://localhost:5000/movies')
+            const res = await fetch('https://movie-portal-server-self-zeta.vercel.app/movies')
             const data = await res.json()
             return data?.find(item => item?._id === params?.id)
           }
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
         {
           path: "/favorites",
           element: <PrivateRoute><MyFavorites></MyFavorites></PrivateRoute>,
-          loader: () => fetch('http://localhost:5000/movies')
+          loader: () => fetch('https://movie-portal-server-self-zeta.vercel.app/movies')
         },
         {
           path: "/statistics",

@@ -5,7 +5,7 @@ const FeaturedMovies = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/featured')
+        fetch('https://movie-portal-server-self-zeta.vercel.app/featured')
             .then(res => res.json())
             .then(data => setMovies(data))
             .catch(err => console.log(err)
