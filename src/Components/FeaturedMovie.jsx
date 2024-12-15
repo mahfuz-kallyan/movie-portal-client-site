@@ -1,12 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const FeaturedMovie = ({ movie }) => {
-    const { poster, genre, title, duration, releaseYear, rating } = movie;
+    const navigate= useNavigate()
+    const { poster, genre, title, duration, releaseYear, rating, _id } = movie;
 
     const handleClick = () => {
         navigate(`/details/${_id}`)
     }
-    
+
     return (
         <div className="card card-compact bg-base-100 w-96 h-auto shadow-2xl space-y-4 border justify-between pt-4">
             <figure className='flex-grow overflow-hidden'>
