@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 
 const Register = () => {
-    const {createUser, setUser, signInWithGoogle}= useContext(AuthContext)
+    const {createUser, setUser, signInWithGoogle, updatedUserProfile}= useContext(AuthContext)
     const [error, setError] = useState({})
     const navigate = useNavigate();
 
@@ -34,7 +34,12 @@ const Register = () => {
         createUser(email, password)
         .then(result => {
             setUser(result.user)
-            navigate("/")
+            updatedUserProfile({
+                displayName: name, photoURL: photo})
+            .then(()=>{
+                navigate("/")
+            })
+            .catch(err=> err.message)
         })
         .catch(err => {
             toast.error(err.message, 'Registration failed')

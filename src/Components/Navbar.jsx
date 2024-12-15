@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navbar = () => {
-const {user, logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const links = <>
         <li className="text-white"><NavLink to="/">Home</NavLink></li>
         <li className="text-white"><NavLink to="/movies">All Movies</NavLink></li>
@@ -43,19 +43,31 @@ const {user, logOut} = useContext(AuthContext)
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-1 gap-2">
-                       {
-                        links
-                       }
+                        {
+                            links
+                        }
                     </ul>
                 </div>
-                
+
                 <div className="navbar-end gap-3">
                     <div>
-                    <input type="checkbox" value="dark" className="toggle theme-controller" />
+                        <input type="checkbox" value="dark" className="toggle theme-controller" />
                     </div>
-                   {
-                    user && user.email?<button onClick={logOut}  className="btn bg-white text-red-500">Logout</button> : <Link to="/login" className="btn bh-white text-red-500">Login</Link>
-                   }
+                    {
+                        user && <div className="mb-2">
+                            <img
+                                className="w-12 h-12 rounded-full mb-2 relative translate-y-1"
+                                src={user?.photoURL}
+                                alt="User Photo"
+                            />
+                            <div className="absolute left-0 bottom-[-30px] hidden group-hover:block bg-gray-700 text-white text-sm rounded px-2 py-1">
+                                {user?.displayName}
+                            </div>
+                        </div>
+                    }
+                    {
+                        user && user.email ? <button onClick={logOut} className="btn bg-white text-red-500">Logout</button> : <Link to="/login" className="btn bh-white text-red-500">Login</Link>
+                    }
                     <Link to="/register" className="btn bg-white text-red-500">Register</Link>
                 </div>
             </div>

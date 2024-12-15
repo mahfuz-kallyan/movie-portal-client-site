@@ -8,7 +8,6 @@ const Login = () => {
     const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
     
 
     const handleSubmit = (e) => {
@@ -19,6 +18,8 @@ const Login = () => {
         console.log('form sign in', email, password);
         userLogin(email, password)
             .then(result => {
+                console.log(result.user);
+                
                 setUser(result.user);
                 navigate(location?.state ? location.state : "/")
                 e.target.reset()

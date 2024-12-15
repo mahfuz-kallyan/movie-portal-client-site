@@ -1,7 +1,12 @@
+import toast from 'react-hot-toast';
 import pic1 from '../assets/images/image1.jpg'
 import pic2 from '../assets/images/image2.jpg'
 import pic3 from '../assets/images/image3.jpg'
 const LatestNews = () => {
+
+    const handleWatch=()=>{
+        toast.error('Nothing is here, Please subscribe to watch something.')
+    }
     return (
         <div className='my-12 space-y-8 lg:p-14 relative mx-auto '>
             <h2 className='text-4xl font-semibold text-center'>Latest News</h2>
@@ -24,7 +29,7 @@ const LatestNews = () => {
                             <h2 className="card-title">New news is released!</h2>
                             <p>Click the button to watch the news.</p>
                             <div className="card-actions justify-end">
-                                <button className="btn bg-red-500 text-white">Watch</button>
+                                <button onClick={handleWatch} className="btn bg-red-500 text-white">Watch</button>
                             </div>
                         </div>
                     </div>
@@ -38,7 +43,7 @@ const LatestNews = () => {
                             <h2 className="card-title">New news is released!</h2>
                             <p>Click the button to watch the news.</p>
                             <div className="card-actions justify-end">
-                                <button className="btn bg-red-500 text-white">Watch</button>
+                                <button onClick={handleWatch}  className="btn bg-red-500 text-white">Watch</button>
                             </div>
                         </div>
                     </div>
