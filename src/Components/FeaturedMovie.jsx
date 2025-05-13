@@ -20,16 +20,16 @@ const FeaturedMovie = ({ movie }) => {
 					/>
 				</figure>
 				<div className="p-4 space-y-2">
-					<h2 className="card-title">{title}</h2>
-					<p className="text-lg font-medium">
+					<h2 className="card-title text-gray-800">{title}</h2>
+					<p className="text-lg text-gray-800">
 						Genre:{" "}
-						<span className="text-sky-500 font-semibold">
+						<span className="text-sky-500 font-medium">
 							{genre}
 						</span>
 					</p>
-					<p className="text-lg font-medium">
+					<p className="text-lg text-gray-800">
 						Duration:{" "}
-						<span className="text-sky-500 font-semibold">
+						<span className="text-sky-500 font-medium">
 							{duration} mins
 						</span>
 					</p>

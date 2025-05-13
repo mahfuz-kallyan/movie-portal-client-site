@@ -17,7 +17,7 @@ const LatestNews = () => {
 						<h3 className="text-3xl font-medium text-sky-600">
 							Latest News
 						</h3>
-						<p className="text-sm ">Latest and upcoming movies</p>
+						<p className="text-sm text-gray-800">Latest and upcoming movies</p>
 					</div>
 				</div>
 				<div className="w-1/2 space-y-4">
@@ -30,10 +30,10 @@ const LatestNews = () => {
 							/>
 						</figure>
 						<div className="card-body">
-							<h2 className="card-title">
+							<h2 className="card-title text-gray-800">
 								New movie is released!
 							</h2>
-							<p>Click the button to watch the news.</p>
+							<p className='text-gray-800'>Click the button to watch the news.</p>
 							<div className="card-actions justify-end">
 								<button
 									onClick={handleWatch}
@@ -53,10 +53,10 @@ const LatestNews = () => {
 							/>
 						</figure>
 						<div className="card-body">
-							<h2 className="card-title">
+							<h2 className="card-title text-gray-800">
 								New movie is released!
 							</h2>
-							<p>Click the button to watch the news.</p>
+							<p className='text-gray-800'>Click the button to watch the news.</p>
 							<div className="card-actions justify-end">
 								<button
 									onClick={handleWatch}

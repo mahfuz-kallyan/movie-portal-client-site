@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import logo from '../assets/icons/icons8-documents-32.png'
 
 
 const Navbar = () => {
@@ -44,9 +45,12 @@ const Navbar = () => {
 							{links}
 						</ul>
 					</div>
-					<a className="text-3xl font-semibold shadow-sm p-1 rounded-lg text-white">
-						Orchid
-					</a>
+                    <div className="flex justify-center items-center">
+                        <img src={logo} alt="" />
+						<a className="text-3xl font-semibold shadow-sm p-1 rounded-lg text-white">
+							Orchid
+						</a>
+					</div>
 				</div>
 				<div className="navbar-center hidden lg:flex">
 					<ul className="menu menu-horizontal p-1 gap-2">{links}</ul>
