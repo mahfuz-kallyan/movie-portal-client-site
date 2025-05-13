@@ -25,7 +25,6 @@ const Statistics = () => {
 
     return (
         <div className='min-h-screen mx-auto'>
-            <h2>Movies: {movies.length}</h2>
             <div className='flex flex-col items-center justify-center my-12'>
                 <BarChart width={600} height={400} data={movies}>
                     <Bar dataKey="Duration" fill="#8884d8" />
