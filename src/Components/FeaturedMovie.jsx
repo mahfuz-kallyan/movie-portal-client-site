@@ -11,7 +11,7 @@ const FeaturedMovie = ({ movie }) => {
 
     return (
 		<div className="flex flex-col justify-center items-center">
-			<div className="card card-compact bg-gray-200 w-80 shadow-xl space-y-2 border justify-between pt-4">
+			<div className="card card-compact bg-base-100 w-80 shadow-xl space-y-2 border justify-between pt-4">
 				<figure className="flex-grow overflow-hidden">
 					<img
 						className="w-11/12 aspect-[0.75] object-cover hover:scale-110 transition-all duration-500"
@@ -20,16 +20,16 @@ const FeaturedMovie = ({ movie }) => {
 					/>
 				</figure>
 				<div className="p-4 space-y-2">
-					<h2 className="card-title text-gray-800">{title}</h2>
-					<p className="text-lg text-gray-800">
+					<h2 className="card-title">{title}</h2>
+					<p>
 						Genre:{" "}
-						<span className="text-sky-500 font-medium">
+						<span className="font-medium">
 							{genre}
 						</span>
 					</p>
-					<p className="text-lg text-gray-800">
+					<p>
 						Duration:{" "}
-						<span className="text-sky-500 font-medium">
+						<span className="font-medium">
 							{duration} mins
 						</span>
 					</p>
