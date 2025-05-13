@@ -14,7 +14,7 @@ const Navbar = () => {
         <li className="text-white"><NavLink to="/statistics">Statistics</NavLink></li>
     </>
     return (
-		<div className="max-w-[1920px] mx-auto bg-gradient-to-r from-sky-600 to-sky-900 px-8 py-2 sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-80 ">
+		<div className="max-w-[1920px] mx-auto bg-gradient-to-r from-sky-600 to-sky-900 lg:px-8 py-2 sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-80 ">
 			<div className="navbar">
 				<div className="navbar-start">
 					<div className="dropdown">
@@ -56,7 +56,7 @@ const Navbar = () => {
 					<ul className="menu menu-horizontal p-1 gap-2">{links}</ul>
 				</div>
 
-				<div className="navbar-end gap-3">
+				<div className="navbar-end gap-1 md:gap-3">
 					<div>
 						<input
 							type="checkbox"
