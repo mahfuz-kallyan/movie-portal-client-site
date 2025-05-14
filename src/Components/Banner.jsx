@@ -1,6 +1,6 @@
-import banner1 from '../assets/images/m8.jpg'
-import banner2 from '../assets/images/m6.jpg'
-import banner3 from '../assets/images/m4.jpg'
+import banner1 from '../assets/images/n1.jpg'
+import banner2 from '../assets/images/m8.jpg'
+import banner3 from '../assets/images/m9.jpg'
 
 const Banner = () => {
     return (

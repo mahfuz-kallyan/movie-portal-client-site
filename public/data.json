@@ -1,0 +1,182 @@
+[
+	{
+		"poster": "https://i.ibb.co.com/1JYWQQ4/Inception-2010.jpg",
+		"title": "Inception",
+		"duration": "148",
+		"rating": 5,
+		"summary": "A skilled thief is offered a chance to erase his past by planting an idea into a target's subconscious.",
+		"genre": "Sci-Fi",
+		"releaseYear": "2010"
+	},
+	{
+		"poster": "https://i.ibb.co.com/YtM2gB9/The-Godfather-1972.jpg",
+		"title": "The Godfather",
+		"duration": "175",
+		"rating": 5,
+		"summary": "The aging patriarch of an organized crime dynasty transfers control to his reluctant son.",
+		"genre": "Crime",
+		"releaseYear": "1972"
+	},
+	{
+		"poster": "https://i.ibb.co.com/NtwbG0K/Interstellar-2014.jpg",
+		"title": "Interstellar",
+		"duration": "169",
+		"rating": 5,
+		"summary": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+		"genre": "Adventure",
+		"releaseYear": "2014"
+	},
+	{
+		"poster": "https://i.ibb.co.com/wg9zR9z/Parasite-2019.jpg",
+		"title": "Parasite",
+		"duration": "132",
+		"rating": 5,
+		"summary": "A poor family schemes to become employed by a wealthy household by posing as unrelated individuals.",
+		"genre": "Thriller",
+		"releaseYear": "2019"
+	},
+	{
+		"poster": "https://i.ibb.co.com/qxvMHPT/Joker-2019.jpg",
+		"title": "Joker",
+		"duration": "122",
+		"rating": 4,
+		"summary": "A mentally troubled comedian descends into nihilism and chaos in Gotham City.",
+		"genre": "Drama",
+		"releaseYear": "2019"
+	},
+	{
+		"poster": "https://i.ibb.co.com/3rcgf1m/La-La-Land-2016.jpg",
+		"title": "La La Land",
+		"duration": "128",
+		"rating": 4,
+		"summary": "A jazz musician and an aspiring actress fall in love in Los Angeles.",
+		"genre": "Musical",
+		"releaseYear": "2016"
+	},
+	{
+		"poster": "https://i.ibb.co.com/SKqGHk5/1917-2019.jpg",
+		"title": "1917",
+		"duration": "119",
+		"rating": 4,
+		"summary": "Two British soldiers must deliver a message to save 1,600 men during World War I.",
+		"genre": "War",
+		"releaseYear": "2019"
+	},
+	{
+		"poster": "https://i.ibb.co.com/XsJFLdW/Fight-Club-1999.jpg",
+		"title": "Fight Club",
+		"duration": "139",
+		"rating": 5,
+		"summary": "An insomniac office worker forms an underground fight club with a soap maker.",
+		"genre": "Drama",
+		"releaseYear": "1999"
+	},
+	{
+		"poster": "https://i.ibb.co.com/yPjXZ8C/Forrest-Gump-1994.jpg",
+		"title": "Forrest Gump",
+		"duration": "142",
+		"rating": 5,
+		"summary": "The life journey of a simple man with a low IQ who influences major historical events.",
+		"genre": "Romance",
+		"releaseYear": "1994"
+	},
+	{
+		"poster": "https://i.ibb.co.com/DYxsm5J/The-Dark-Knight-2008.jpg",
+		"title": "The Dark Knight",
+		"duration": "152",
+		"rating": 5,
+		"summary": "Batman faces off against the Joker, a criminal mastermind who wants to plunge Gotham into anarchy.",
+		"genre": "Action",
+		"releaseYear": "2008"
+	},
+	{
+		"poster": "https://i.ibb.co.com/SKqGHk5/Whiplash-2014.jpg",
+		"title": "Whiplash",
+		"duration": "106",
+		"rating": 5,
+		"summary": "A promising young drummer enrolls at a cut-throat music conservatory.",
+		"genre": "Drama",
+		"releaseYear": "2014"
+	},
+	{
+		"poster": "https://i.ibb.co.com/3rcgf1m/Mad-Max-Fury-Road-2015.jpg",
+		"title": "Mad Max: Fury Road",
+		"duration": "120",
+		"rating": 4,
+		"summary": "In a post-apocalyptic world, Max teams up with a mysterious woman to flee a tyrant.",
+		"genre": "Action",
+		"releaseYear": "2015"
+	},
+	{
+		"poster": "https://i.ibb.co.com/NtwbG0K/Get-Out-2017.jpg",
+		"title": "Get Out",
+		"duration": "104",
+		"rating": 4,
+		"summary": "A young African-American visits his white girlfriend's family for the weekend.",
+		"genre": "Horror",
+		"releaseYear": "2017"
+	},
+	{
+		"poster": "https://i.ibb.co.com/qxvMHPT/The-Social-Network-2010.jpg",
+		"title": "The Social Network",
+		"duration": "120",
+		"rating": 4,
+		"summary": "The story of Facebook’s founding and the lawsuits that followed.",
+		"genre": "Biography",
+		"releaseYear": "2010"
+	},
+	{
+		"poster": "https://i.ibb.co.com/DYxsm5J/Arrival-2016.jpg",
+		"title": "Arrival",
+		"duration": "116",
+		"rating": 4,
+		"summary": "A linguist tries to communicate with mysterious extraterrestrial visitors.",
+		"genre": "Sci-Fi",
+		"releaseYear": "2016"
+	},
+	{
+		"poster": "https://i.ibb.co.com/1JYWQQ4/Her-2013.jpg",
+		"title": "Her",
+		"duration": "126",
+		"rating": 4,
+		"summary": "A lonely man falls in love with an operating system.",
+		"genre": "Romance",
+		"releaseYear": "2013"
+	},
+	{
+		"poster": "https://i.ibb.co.com/XsJFLdW/The-Wolf-of-Wall-Street-2013.jpg",
+		"title": "The Wolf of Wall Street",
+		"duration": "180",
+		"rating": 4,
+		"summary": "A New York stockbroker rises to prominence through corruption and excess.",
+		"genre": "Biography",
+		"releaseYear": "2013"
+	},
+	{
+		"poster": "https://i.ibb.co.com/yPjXZ8C/The-Grand-Budapest-Hotel-2014.jpg",
+		"title": "The Grand Budapest Hotel",
+		"duration": "99",
+		"rating": 4,
+		"summary": "A concierge is framed for murder and teams up with a lobby boy to clear his name.",
+		"genre": "Comedy",
+		"releaseYear": "2014"
+	},
+	{
+		"poster": "https://i.ibb.co.com/YtM2gB9/Soul-2020.jpg",
+		"title": "Soul",
+		"duration": "100",
+		"rating": 5,
+		"summary": "A musician has a near-death experience that changes his outlook on life.",
+		"genre": "Animation",
+		"releaseYear": "2020"
+	},
+	{
+		"poster": "https://i.ibb.co.com/NtwbG0K/Dune-2021.jpg",
+		"title": "Dune",
+		"duration": "155",
+		"rating": 4,
+		"summary": "A noble family becomes embroiled in a war for control of a desert planet.",
+		"genre": "Sci-Fi",
+		"releaseYear": "2021"
+	}
+]

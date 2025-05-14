@@ -9,7 +9,7 @@ const MoreNews = () => {
 		<div className="mx-auto my-12 p-4 lg:px-12 lg:py-8">
 			<h2 className='text-4xl font-semibold text-gray-800 text-center my-10'>More News</h2>
 			<div className="flex flex-col lg:flex-row justify-center items-center gap-4">
-				<div className="w-6/12 relative">
+				<div className="lg:w-6/12 relative">
 					<img
 						className="w-full h-[528px] object-cover opacity-80"
 						src={image1}
@@ -24,7 +24,7 @@ const MoreNews = () => {
 						</h3>
 					</div>
 				</div>
-				<div className="w-6/12 flex flex-col justify-center gap-4">
+				<div className="lg:w-6/12 flex flex-col justify-center gap-4">
 					<div className="flex justify-center items-center gap-4">
 						<div className="relative">
 							<img

@@ -20,26 +20,22 @@ const FeaturedMovie = ({ movie }) => {
 					/>
 				</figure>
 				<div className="p-4 space-y-2">
-					<h2 className="card-title">{title}</h2>
-					<p>
-						Genre:{" "}
-						<span className="font-medium">
+					<div className="flex justify-between items-center">
+						<h3 className="font-semibold">{title}</h3>
+						<p className="text-sm font-medium text-sky-600">
+							{releaseYear}
+						</p>
+					</div>
+					<div className="flex justify-between items-center">
+						<p className="text-sm font-semibold text-sky-600">
 							{genre}
-						</span>
-					</p>
-					<p>
-						Duration:{" "}
-						<span className="font-medium">
-							{duration} mins
-						</span>
-					</p>
-					<div className="card-actions justify-center">
-						<button
-							onClick={handleClick}
-							className="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-800 text-white mt-2"
-						>
-							See Details
-						</button>
+						</p>
+						<div className="flex justify-center items-center gap-2">
+							<i class="fa-solid fa-clock text-sky-600"></i>
+							<p className="text-sm font-medium text-sky-600">
+								{duration}
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

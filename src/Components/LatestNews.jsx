@@ -8,10 +8,10 @@ const LatestNews = () => {
         toast.error('Nothing is here, Please subscribe to watch something.')
     }
     return (
-		<div className="my-12 space-y-8 lg:px-14 lg:py-8 relative mx-auto ">
+		<div className="my-12 space-y-8 lg:px-14 lg:py-8 relative mx-auto p-4 ">
 			<h2 className="text-4xl font-semibold text-center">Latest News</h2>
 			<div className="flex gap-8 flex-col lg:flex-row justify-center items-center">
-				<div className="w-1/2 relative">
+				<div className="lg:w-1/2 relative">
 					<img className="rounded-2xl" src={pic1} alt="" />
 					<div className="absolute left-4 bottom-8   lg:bottom-24 lg:left-14">
 						<h3 className="text-3xl font-medium text-sky-600">
@@ -20,7 +20,7 @@ const LatestNews = () => {
 						<p className="text-sm text-gray-800">Latest and upcoming movies</p>
 					</div>
 				</div>
-				<div className="w-1/2 space-y-4">
+				<div className="lg:w-1/2 space-y-4">
 					<div className="card card-side bg-gray-300 shadow-xl">
 						<figure>
 							<img
