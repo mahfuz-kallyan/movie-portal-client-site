@@ -8,7 +8,7 @@ const LatestNews = () => {
         toast.error('Nothing is here, Please subscribe to watch something.')
     }
     return (
-		<div className="my-12 space-y-8 lg:p-14 relative mx-auto ">
+		<div className="my-12 space-y-8 lg:px-14 lg:py-8 relative mx-auto ">
 			<h2 className="text-4xl font-semibold text-center">Latest News</h2>
 			<div className="flex gap-8 flex-col lg:flex-row justify-center items-center">
 				<div className="w-1/2 relative">

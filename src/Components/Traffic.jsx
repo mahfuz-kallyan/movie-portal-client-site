@@ -7,7 +7,7 @@ const Traffic = () => {
 }
 
     return (
-		<div className="bg-sky-800 flex flex-col md:flex-row justify-center items-center gap-8 my-14">
+		<div className="bg-sky-800 flex flex-col md:flex-row justify-center items-center gap-8 my-12 lg:py-8">
 			<div className="p-4 lg:py-14 lg:w-8/12 space-y-3">
 				<h3 className="text-white text-3xl font-medium">
 					Filmverse is what you need, to get traffic for your awesome

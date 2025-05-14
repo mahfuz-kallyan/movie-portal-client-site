@@ -13,7 +13,7 @@ const FeaturedMovies = () => {
     }, [])
 
     return (
-        <div className='my-14'>
+        <div className='my-12'>
             <h2 className='text-center text-4xl font-semibold'>Featured Movies</h2>
            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 w-11/12 mx-auto'>
            {
