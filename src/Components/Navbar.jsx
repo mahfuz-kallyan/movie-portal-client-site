@@ -45,10 +45,11 @@ const Navbar = () => {
 							{links}
 						</ul>
 					</div>
-                    <div className="flex justify-center items-center">
-                        <img src={logo} alt="" />
+					<div className="flex justify-center items-center">
+						<img src={logo} alt="" />
 						<a className="text-3xl font-semibold shadow-sm p-1 rounded-lg text-white">
-							Orchid
+							<span className="text-4xl">F</span>ilm
+							<span className="text-4xl">V</span>erse
 						</a>
 					</div>
 				</div>
