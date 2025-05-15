@@ -1,8 +1,9 @@
 import React from 'react';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const Traffic = () => {
-    const handleStart = () => {
+    const handleStarted = () => {
     toast.success('Started Successfully')
 }
 
@@ -19,18 +20,7 @@ const Traffic = () => {
 				</h5>
 			</div>
 			<div>
-				<div className="join">
-					<input
-						name="email"
-						className="input  input-bordered join-item "
-						placeholder="Email"
-					/>
-					<button onClick={handleStart}
-						className="btn join-item rounded-r-full text-sky-600 bg-gray-900"
-					>
-						GET STARTED
-					</button>
-				</div>
+				<button onClick={handleStarted} className='px-2 py-2 border rounded-sm text-sky-400 hover:bg-sky-900 border-sky-400'>Get Started</button>	
 			</div>
 		</div>
 	);
