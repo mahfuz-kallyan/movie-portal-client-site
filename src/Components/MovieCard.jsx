@@ -19,7 +19,7 @@ const MovieCard = ({ movie, isFavorite = false, deleteFavorite }) => {
 				/>
 			</figure>
 			<div className="p-8 space-y-4">
-				<h2 className="card-title">{title}</h2>
+				<h2 className="card-title text-sky-500">{title}</h2>
 				<p>
 					Genre: <span className="font-medium">{genre}</span>
 				</p>
@@ -39,13 +39,13 @@ const MovieCard = ({ movie, isFavorite = false, deleteFavorite }) => {
 						<>
 							<button
 								onClick={handleClick}
-								className="btn bg-red-500 text-white"
+								className="py-2 px-3 rounded-md bg-sky-400 hover:bg-sky-600 text-white font-medium shadow-md hover:shadow-lg focus:outline-none transition duration-300"
 							>
 								See Details
 							</button>
 							<button
 								onClick={() => deleteFavorite(_id)}
-								className="btn bg-red-500 text-white"
+								className="py-2 px-3 rounded-md bg-sky-400 hover:bg-sky-600 text-white font-medium shadow-md hover:shadow-lg focus:outline-none transition duration-300"
 							>
 								See Remove Favorite
 							</button>

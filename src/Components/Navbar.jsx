@@ -15,7 +15,7 @@ const Navbar = () => {
     </>
     return (
 		<div className="max-w-[1920px] mx-auto bg-gradient-to-r from-sky-600 to-sky-900 lg:px-8 py-2 sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-80 ">
-			<div className="navbar">
+			<div className="navbar flex flex-col md:flex-row justify-center items-center">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<div

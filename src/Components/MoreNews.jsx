@@ -7,7 +7,7 @@ import image4 from '../assets/images/m5.jpg'
 const MoreNews = () => {
     return (
 		<div className="mx-auto my-12 p-4 lg:px-12 lg:py-8">
-			<h2 className='text-4xl font-semibold text-gray-800 text-center my-10'>More News</h2>
+			<h2 className='text-4xl font-semibold text-center my-10'>More News</h2>
 			<div className="flex flex-col lg:flex-row justify-center items-center gap-4">
 				<div className="lg:w-6/12 relative">
 					<img

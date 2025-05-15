@@ -51,35 +51,67 @@ const Details = () => {
     }
    
     return (
-        <div className='py-14'>
-            <h2 className='text-center text-3xl font-semibold my-12'>Movie Details</h2>
-            <div className='px-14 w-2/3 mx-auto'>
-                <div className="card card-side bg-gray-200 shadow-xl">
-                    <figure>
-                        <img
-                            src={poster}
-                            alt="Movie" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-red-500">{title}</h2>
-                        <p>{summary}</p>
-                        <p className='text-lg font-medium'>Duration: <span className='text-red-500 font-semibold'>{duration} mins</span></p>
-                        <p className='text-lg font-medium'>Genre: <span className='text-red-500 font-semibold'>{genre}</span></p>
-                        <p className='text-lg font-medium'>Rating: <span className='text-red-500 font-semibold'>{rating}</span></p>
-                        <p className='text-lg font-medium'>Release Year: <span className='text-red-500 font-semibold'>{releaseYear}</span></p>
-                        <div className="card-actions">
-                            <button onClick={() => handleDelete(_id)} className="btn bg-red-500 text-white">Delete Movie</button>
-                            <button onClick={() => saveMovieToFavorite(_id)} className="btn bg-red-500 text-white">Add to Favorite</button>
-                        </div>
-                        <div className="card-actions justify-end mt-14">
-                            {/* <Link to={`/updateMovies/${_id}`} className='btn btn-neutral'>Update Movie</Link> */}
-                            <button onClick={handleClick} className="btn btn-neutral">See All Movies</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+		<div className="py-14">
+			<h2 className="text-center text-3xl font-semibold my-12">
+				Movie Details
+			</h2>
+			<div className="px-14 lg:w-2/3 mx-auto">
+				<div className="card card-side bg-gray-200 shadow-xl">
+					<figure>
+						<img src={poster} alt="Movie" />
+					</figure>
+					<div className="card-body">
+						<h2 className="card-title text-sky-500">{title}</h2>
+						<p>{summary}</p>
+						<p className="text-lg font-medium">
+							Duration:{" "}
+							<span className="text-sky-500 font-semibold">
+								{duration} mins
+							</span>
+						</p>
+						<p className="text-lg font-medium">
+							Genre:{" "}
+							<span className="text-sky-500 font-semibold">
+								{genre}
+							</span>
+						</p>
+						<p className="text-lg font-medium">
+							Rating:{" "}
+							<span className="text-sky-500 font-semibold">
+								{rating}
+							</span>
+						</p>
+						<p className="text-lg font-medium">
+							Release Year:{" "}
+							<span className="text-sky-500 font-semibold">
+								{releaseYear}
+							</span>
+						</p>
+						<div className="card-actions">
+							<button
+								onClick={() => handleDelete(_id)}
+								className="py-2 px-4 rounded-md bg-sky-400 hover:bg-sky-600 text-white font-medium shadow-md hover:shadow-lg focus:outline-none transition duration-300"
+							>
+								Delete Movie
+							</button>
+							<button
+								onClick={() => saveMovieToFavorite(_id)}
+								className="py-2 px-2 rounded-md bg-sky-400 hover:bg-sky-600 text-white font-medium shadow-md hover:shadow-lg focus:outline-none transition duration-300"
+							>
+								Add to Favorite
+							</button>
+							<button
+								onClick={handleClick}
+								className="py-2 px-4 rounded-md bg-sky-400 hover:bg-sky-600 text-white font-medium shadow-md hover:shadow-lg focus:outline-none transition duration-300"
+							>
+								See All Movies
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Details;

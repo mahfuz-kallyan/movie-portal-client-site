@@ -116,118 +116,140 @@ const AddMovies = () => {
 
 
     return (
-        <div className="mx-auto bg-gray-200 pt-12 min-h-screen">
-            <h2 className="text-center text-4xl font-semibold mb-8">Add Movies</h2>
-            <form className="w-3/4 mx-auto py-8" onSubmit={handleSubmit}>
-                <div className="space-y-8">
-                    <div className="md:flex gap-8">
-                        <div className="md:w-1/2">
-                            <h3 className="text-xl font-medium mb-2">Movie Poster</h3>
-                            <input
-                                type="text"
-                                name="poster"
-                                className="input input-bordered w-full"
-                                placeholder="Poster link"
-                                value={movieData.poster}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className="md:w-1/2">
-                            <h3 className="text-xl font-medium mb-2">Movie Title</h3>
-                            <input
-                                type="text"
-                                name="title"
-                                className="input input-bordered w-full"
-                                placeholder="Movie title"
-                                value={movieData.title}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="md:flex gap-8">
-                        <div className="md:w-1/2">
-                            <h3 className="text-xl font-medium mb-2">Duration</h3>
-                            <input
-                                type="text"
-                                name="duration"
-                                className="input input-bordered w-full"
-                                placeholder="Duration (e.g., 2h 30min)"
-                                value={movieData.duration}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className="md:w-1/2">
-                            <h3 className="text-xl font-medium mb-2">Rating</h3>
-                            <div className="flex">
-                                {[...Array(5)].map((star, index) => {
-                                    const ratingValue = index + 1;
-                                    return (
-                                        <label key={index}>
-                                            <input
-                                                type="radio"
-                                                name="rating"
-                                                className="hidden"
-                                                value={ratingValue}
-                                                onClick={() => handleRating(ratingValue)}
-                                            />
-                                            <FaStar
-                                                className="cursor-pointer"
-                                                color={ratingValue <= movieData.rating ? "orange" : "gray"}
-                                                size={30}
-                                            />
-                                        </label>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <h3 className="text-xl font-medium mb-2">Summary</h3>
-                        <textarea
-                            name="summary"
-                            placeholder="Movie summary"
-                            className="textarea textarea-bordered w-full"
-                            value={movieData.summary}
-                            onChange={handleInputChange}
-                        ></textarea>
-                    </div>
-                    <div className="space-y-4">
-                        <div>
-                            <h3 className="text-xl font-medium mb-2">Genre</h3>
-                            <select
-                                name="genre"
-                                className="select select-bordered w-full"
-                                value={movieData.genre}
-                                onChange={handleInputChange}
-                            >
-                                <option value="Comedy">Comedy</option>
-                                <option value="Drama">Drama</option>
-                                <option value="Horror">Horror</option>
-                            </select>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-medium mb-2">Release Year</h3>
-                            <select
-                                name="releaseYear"
-                                className="select select-bordered w-full"
-                                value={movieData.releaseYear}
-                                onChange={handleInputChange}
-                            >
-                                <option value="2024">2024</option>
-                                <option value="2023">2023</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div className="my-12">
-                    <button type="submit" className="btn btn-block btn-neutral text-xl">Submit</button>
-                </div>
-            </form>
-        </div>
-    );
+		<div className="mx-auto bg-gray-200 pt-12 min-h-screen">
+			<h2 className="text-center text-4xl font-semibold mb-8">
+				Add Movies
+			</h2>
+			<form className="w-3/4 mx-auto py-8" onSubmit={handleSubmit}>
+				<div className="space-y-8">
+					<div className="md:flex gap-8">
+						<div className="md:w-1/2">
+							<h3 className="text-xl font-medium mb-2">
+								Movie Poster
+							</h3>
+							<input
+								type="text"
+								name="poster"
+								className="input input-bordered border-sky-400 w-full"
+								placeholder="Poster link"
+								value={movieData.poster}
+								onChange={handleInputChange}
+							/>
+						</div>
+						<div className="md:w-1/2">
+							<h3 className="text-xl font-medium mb-2">
+								Movie Title
+							</h3>
+							<input
+								type="text"
+								name="title"
+								className="input input-bordered w-full border-sky-400"
+								placeholder="Movie title"
+								value={movieData.title}
+								onChange={handleInputChange}
+							/>
+						</div>
+					</div>
+					<div className="md:flex gap-8">
+						<div className="md:w-1/2">
+							<h3 className="text-xl font-medium mb-2">
+								Duration
+							</h3>
+							<input
+								type="text"
+								name="duration"
+								className="input input-bordered w-full border-sky-400"
+								placeholder="Duration (e.g., 2h 30min)"
+								value={movieData.duration}
+								onChange={handleInputChange}
+							/>
+						</div>
+						<div className="md:w-1/2">
+							<h3 className="text-xl font-medium mb-2">Rating</h3>
+							<div className="flex">
+								{[...Array(5)].map((star, index) => {
+									const ratingValue = index + 1;
+									return (
+										<label key={index}>
+											<input
+												type="radio"
+												name="rating"
+												className="hidden border-sky-400"
+												value={ratingValue}
+												onClick={() =>
+													handleRating(ratingValue)
+												}
+											/>
+											<FaStar
+												className="cursor-pointer"
+												color={
+													ratingValue <=
+													movieData.rating
+														? "orange"
+														: "gray"
+												}
+												size={30}
+											/>
+										</label>
+									);
+								})}
+							</div>
+						</div>
+					</div>
+					<div className="w-full">
+						<h3 className="text-xl font-medium mb-2">Summary</h3>
+						<textarea
+							name="summary"
+							placeholder="Movie summary"
+							className="textarea textarea-bordered w-full border-sky-400"
+							value={movieData.summary}
+							onChange={handleInputChange}
+						></textarea>
+					</div>
+					<div className="space-y-4">
+						<div>
+							<h3 className="text-xl font-medium mb-2">Genre</h3>
+							<select
+								name="genre"
+								className="select select-bordered w-full border-sky-400"
+								value={movieData.genre}
+								onChange={handleInputChange}
+							>
+								<option value="Comedy">Comedy</option>
+								<option value="Drama">Drama</option>
+								<option value="Horror">Horror</option>
+							</select>
+						</div>
+						<div>
+							<h3 className="text-xl font-medium mb-2">
+								Release Year
+							</h3>
+							<select
+								name="releaseYear"
+								className="select select-bordered w-full border-sky-400"
+								value={movieData.releaseYear}
+								onChange={handleInputChange}
+							>
+								<option value="2024">2024</option>
+								<option value="2023">2023</option>
+								<option value="2022">2022</option>
+								<option value="2021">2021</option>
+								<option value="2020">2020</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div className="my-12">
+					<button
+						type="submit"
+						className="btn btn-block bg-sky-600 text-white text-xl"
+					>
+						Submit
+					</button>
+				</div>
+			</form>
+		</div>
+	);
 };
 
 export default AddMovies;
