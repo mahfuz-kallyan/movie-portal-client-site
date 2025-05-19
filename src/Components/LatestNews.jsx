@@ -1,14 +1,14 @@
 import toast from 'react-hot-toast';
 import pic1 from '../assets/images/image1.jpg'
-import pic2 from '../assets/images/image2.jpg'
-import pic3 from '../assets/images/image3.jpg'
+import pic2 from '../assets/images/g1.jpg'
+import pic3 from '../assets/images/g2.jpg'
 const LatestNews = () => {
 
     const handleWatch=()=>{
         toast.error('Nothing is here, Please subscribe to watch something.')
     }
     return (
-		<div className="my-12 space-y-8 lg:px-14 lg:py-8 relative mx-auto p-4 ">
+		<div className="my-12 space-y-8 lg:px-14 lg:py-8 relative mx-auto p-2 ">
 			<h2 className="text-4xl font-semibold text-center">Latest News</h2>
 			<div className="flex gap-8 flex-col lg:flex-row justify-center items-center">
 				<div className="lg:w-1/2 relative">
@@ -20,11 +20,11 @@ const LatestNews = () => {
 						<p className="text-sm text-gray-800">Latest and upcoming movies</p>
 					</div>
 				</div>
-				<div className="lg:w-1/2 space-y-4">
+				<div className="w-1/2 space-y-4">
 					<div className="card card-side bg-gray-300 shadow-xl">
-						<figure>
+						<figure className='md:w-1/2'>
 							<img
-								className="w-60  px-4"
+								
 								src={pic2}
 								alt="Movie"
 							/>
@@ -45,9 +45,9 @@ const LatestNews = () => {
 						</div>
 					</div>
 					<div className="card card-side bg-gray-300 shadow-xl">
-						<figure>
+						<figure className='md:w-1/2'>
 							<img
-								className="w-60 h-60 p-4 rounded-lg "
+								className=" rounded-lg  "
 								src={pic3}
 								alt="Movie"
 							/>

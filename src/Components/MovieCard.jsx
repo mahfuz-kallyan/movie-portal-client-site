@@ -10,7 +10,7 @@ const MovieCard = ({ movie, isFavorite = false, deleteFavorite }) => {
     }
 
     return (
-		<div className="card card-compact bg-base-100 w-96 h-auto shadow-2xl space-y-4 border justify-between pt-4">
+		<div className="card card-compact bg-base-100  h-auto shadow-2xl space-y-4 border justify-between pt-4">
 			<figure className="flex-grow overflow-hidden">
 				<img
 					className="w-60 aspect-[0.75] object-cover hover:scale-110 transition-all duration-500"

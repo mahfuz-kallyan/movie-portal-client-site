@@ -10,7 +10,7 @@ const FeaturedMovie = ({ movie }) => {
 
 	return (
 		<div className="flex flex-col justify-center items-center">
-			<div className="card card-compact bg-base-100 w-80 shadow-xl space-y-2 border justify-between pt-4">
+			<div className="card card-compact bg-base-100  shadow-xl space-y-2 border justify-between pt-4 w-80">
 				<figure className="flex-grow overflow-hidden">
 					<img
 						className="w-11/12 aspect-[0.75] object-cover hover:scale-110 transition-all duration-500"

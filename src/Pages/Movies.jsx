@@ -11,9 +11,9 @@ const Movies = () => {
         }
    })
     return (
-        <div className="mx-auto flex flex-col justify-center items-center">
-           <h2 className="text-center text-3xl font-semibold py-14">All Movies</h2>
-           <div className="p-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mx-auto">
+           <h2 className="text-center text-3xl font-semibold p-2 md:p-4 lg:py-8">All Movies</h2>
+           <div className="p-2 md:p-4 lg:p-8 grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             {
                 movies?.map(movie=> <MovieCard key={movie._id} movie={movie}></MovieCard>)
             }

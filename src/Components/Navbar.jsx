@@ -14,9 +14,9 @@ const Navbar = () => {
         <li className="text-white"><NavLink to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
-		<div className="max-w-[1920px] mx-auto bg-gradient-to-r from-sky-600 to-sky-900 lg:px-8 py-2 sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-80 ">
-			<div className="navbar flex flex-col md:flex-row justify-center items-center">
-				<div className="navbar-start">
+		<div className="max-w-[1920px] mx-auto bg-gradient-to-r from-sky-600 to-sky-900 lg:px-8 sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-80 p-2">
+			<div className="navbar flex flex-col md:flex-row justify-between justify-items-center ">
+				<div>
 					<div className="dropdown">
 						<div
 							tabIndex={0}
@@ -40,7 +40,7 @@ const Navbar = () => {
 						</div>
 						<ul
 							tabIndex={0}
-							className="bg-red-400 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow gap-2"
+							className="bg-sky-600 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow gap-2"
 						>
 							{links}
 						</ul>
@@ -57,7 +57,7 @@ const Navbar = () => {
 					<ul className="menu menu-horizontal p-1 gap-2">{links}</ul>
 				</div>
 
-				<div className="navbar-end gap-1 md:gap-3">
+				<div className=" gap-1 md:gap-3">
 					<div>
 						<input
 							type="checkbox"

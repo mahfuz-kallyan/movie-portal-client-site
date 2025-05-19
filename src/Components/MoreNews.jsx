@@ -8,23 +8,23 @@ const MoreNews = () => {
     return (
 		<div className="mx-auto my-12 p-4 lg:px-12 lg:py-8">
 			<h2 className='text-4xl font-semibold text-center my-10'>More News</h2>
-			<div className="flex flex-col lg:flex-row justify-center items-center gap-4">
+			<div className="flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-4">
 				<div className="lg:w-6/12 relative">
 					<img
 						className="w-full h-[528px] object-cover opacity-80"
 						src={image1}
 						alt=""
 					/>
-					<div className="absolute bottom-2 left-8">
+					<div className="absolute bottom-4 left-8">
 						<p className="text-orange-500 font-semibold">
 							HOME GRID, NEWS & UPDATES
 						</p>
-						<h3 className="text-2xl font-semibold text-white">
+						<h3 className=" text-xl md:text-2xl font-semibold text-white">
 							9 FILMS ARE VYING FOR FOREIGN OSCAR NOMINATION
 						</h3>
 					</div>
 				</div>
-				<div className="lg:w-6/12 flex flex-col justify-center gap-4">
+				<div className="lg:w-6/12 flex flex-col justify-center gap-2 md:gap-4">
 					<div className="flex justify-center items-center gap-4">
 						<div className="relative">
 							<img
@@ -32,11 +32,11 @@ const MoreNews = () => {
 								src={image4}
 								alt=""
 							/>
-							<div className="absolute bottom-6 left-2">
-								<p className="text-orange-500 font-semibold">
+							<div className="absolute bottom-2 left-2">
+								<p className="text-orange-500 md:font-semibold">
 									HOME GRID, NEWS & UPDATES
 								</p>
-								<h3 className="text-2xl font-semibold text-white">
+								<h3 className=" text-lg md:text-2xl font-semibold text-white">
 									'TITANIC', GOONIES NAMED NATIONAL FILM
 									TREASURES
 								</h3>
@@ -48,11 +48,11 @@ const MoreNews = () => {
 								src={image2}
 								alt=""
 							/>
-							<div className="absolute bottom-6 left-2">
-								<p className="text-orange-500 font-semibold">
+							<div className="absolute bottom-2 left-2">
+								<p className="text-orange-500 md:font-semibold">
 									HOME GRID, NEWS & UPDATES
 								</p>
-								<h3 className="text-2xl font-semibold text-white">
+								<h3 className="md:text-2xl font-semibold text-white">
 									REUNITING AT THE 2018 COACHELLA MUSIC
 									FESTIVAL
 								</h3>
@@ -65,7 +65,7 @@ const MoreNews = () => {
 							src={image3}
 							alt=""
 						/>
-						<div className="absolute bottom-6 left-4">
+						<div className="absolute bottom-2 left-4">
 							<p className="text-orange-500 font-semibold">
 								HOME GRID, NEWS & UPDATES
 							</p>

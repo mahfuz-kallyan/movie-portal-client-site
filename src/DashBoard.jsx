@@ -1,3 +1,4 @@
+
 import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
@@ -5,23 +6,18 @@ const Dashboard = () => {
 
 	return (
 		<div className="flex mx-auto">
-			<div className="w-64 min-h-screen bg-sky-800 p-2 md:p-4 lg:p-6">
-				<ul className="menu text-white text-lg font-medium">
+			<div className="md:w-2/12 min-h-screen bg-sky-800 p-2 md:p-4 lg:p-6">
+				<ul className="menu text-white text-lg font-medium space-y-2">
 					{isAdmin ? (
 						<>
 							<li>
-								<NavLink to={"/dashboard/adminHome"}>
-									Admin Home
-								</NavLink>
-							</li>
-							<li>
-								<NavLink to={"/dashboard/addItems"}>
-									Add Items
-								</NavLink>
-							</li>
-							<li>
 								<NavLink to={"/dashboard/users"}>
 									All Users
+								</NavLink>
+							</li>
+							<li>
+								<NavLink to={"/dashboard/statistics"}>
+									Statistics
 								</NavLink>
 							</li>
 						</>
@@ -38,18 +34,21 @@ const Dashboard = () => {
 								</NavLink>
 							</li>
 							<li>
-								<NavLink to={"/statistics"}>Statistics</NavLink>
+								<NavLink to={"/dashboard/statistics"}>
+									Statistics
+								</NavLink>
 							</li>
 						</>
 					)}
-					<div className="divider"></div>
+
 					{/* shared nav links */}
+					<div className="divider"></div>
 					<li>
 						<NavLink to={"/"}>Home</NavLink>
 					</li>
 				</ul>
 			</div>
-			<div className="flex-1 p-2 md:p-4 lg:p-6">
+			<div className="flex-1 p-4 md:p-8 min-h-screen">
 				<Outlet></Outlet>
 			</div>
 		</div>

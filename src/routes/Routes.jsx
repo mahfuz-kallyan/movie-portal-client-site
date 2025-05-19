@@ -71,15 +71,19 @@ export const router = createBrowserRouter([
 	{
 		path: "/dashboard",
 		element: <Dashboard></Dashboard>,
-    children: [
-      {path: 'statistics',
-        element: <Statistics></Statistics>
-		},
-		// Admin routes
-		{
-			path: 'users',
-			element: <AllUsers></AllUsers>
-		},
+		children: [
+			{
+				index: true,
+				element: <AllUsers />,
+			},
+			{
+				path: "statistics",
+				element: <Statistics></Statistics>,
+			},
+			{
+				path: "users",
+				element: <AllUsers></AllUsers>,
+			},
 		],
 	},
 ]);
