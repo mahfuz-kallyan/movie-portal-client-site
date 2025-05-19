@@ -11,6 +11,7 @@ import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Statistics from "../Pages/Dashboard/Statistics";
 import Dashboard from "../DashBoard";
+import AllUsers from "../Pages/Dashboard/AllUsers";
 
 export const router = createBrowserRouter([
 	{
@@ -73,7 +74,12 @@ export const router = createBrowserRouter([
     children: [
       {path: 'statistics',
         element: <Statistics></Statistics>
-      }
+		},
+		// Admin routes
+		{
+			path: 'users',
+			element: <AllUsers></AllUsers>
+		},
 		],
 	},
 ]);
