@@ -11,7 +11,7 @@ const Navbar = () => {
         <li className="text-white"><NavLink to="/movies">All Movies</NavLink></li>
         <li className="text-white"><NavLink to="/addMovies">Add Movies</NavLink></li>
         <li className="text-white"><NavLink to="/favorites">My Favorites</NavLink></li>
-        <li className="text-white"><NavLink to="/statistics">Statistics</NavLink></li>
+        <li className="text-white"><NavLink to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
 		<div className="max-w-[1920px] mx-auto bg-gradient-to-r from-sky-600 to-sky-900 lg:px-8 py-2 sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-80 ">

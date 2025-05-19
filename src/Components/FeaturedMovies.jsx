@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+
 import FeaturedMovie from "./FeaturedMovie";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
 const FeaturedMovies = () => {
-	const [movies, setMovies] = useState([]);
 
-	useEffect(() => {
-		fetch("https://movie-portal-server-self-zeta.vercel.app/featured")
-			.then((res) => res.json())
-			.then((data) => setMovies(data))
-			.catch((err) => console.log(err));
-	}, []);
+	const { data: movies } = useQuery({
+		queryKey: ["movies"],
+		queryFn: async () => {
+			const res = await fetch(
+				"https://movie-portal-server-self-zeta.vercel.app/featured"
+			);
+			return res.json();
+		},
+	});
 
 	return (
 		<div className="my-12 p-6">
@@ -18,7 +21,7 @@ const FeaturedMovies = () => {
 				Featured Movies
 			</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 w-11/12 mx-auto">
-				{movies.map((movie) => (
+				{movies?.map((movie) => (
 					<FeaturedMovie
 						key={movie._id}
 						movie={movie}

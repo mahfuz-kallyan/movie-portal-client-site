@@ -1,15 +1,14 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const FeaturedMovie = ({ movie }) => {
-    const navigate = useNavigate()
-    const { poster, genre, title, duration, releaseYear, rating, _id } = movie;
+	const navigate = useNavigate();
+	const { poster, genre, title, duration, releaseYear, rating, _id } = movie;
 
-    const handleClick = () => {
-        navigate(`/details/${_id}`)
-    }
+	const handleClick = () => {
+		navigate(`/details/${_id}`);
+	};
 
-    return (
+	return (
 		<div className="flex flex-col justify-center items-center">
 			<div className="card card-compact bg-base-100 w-80 shadow-xl space-y-2 border justify-between pt-4">
 				<figure className="flex-grow overflow-hidden">
@@ -31,7 +30,7 @@ const FeaturedMovie = ({ movie }) => {
 							{genre}
 						</p>
 						<div className="flex justify-center items-center gap-2">
-							<i class="fa-solid fa-clock text-sky-600"></i>
+							<i className="fa-solid fa-clock text-sky-600"></i>
 							<p className="text-sm font-medium text-sky-600">
 								{duration}
 							</p>

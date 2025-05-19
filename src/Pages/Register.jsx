@@ -3,64 +3,86 @@ import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import registerAnim from '../assets/animation/register.json'
+import registerAnim from "../assets/animation/register.json";
 import Lottie from "lottie-react";
-
+import usePublic from "../Hooks/usePublic";
+import Swal from "sweetalert2";
 
 const Register = () => {
-    const {createUser, setUser, signInWithGoogle, updatedUserProfile}= useContext(AuthContext)
-    const [error, setError] = useState({})
-    const navigate = useNavigate();
+	const axiosPublic = usePublic();
+	const { createUser, setUser, signInWithGoogle, updatedUserProfile } =
+		useContext(AuthContext);
+	const [error, setError] = useState({});
+	const navigate = useNavigate();
 
-    const validatePassword = (password) => {
-        const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-        return regex.test(password);
-    };
+	const validatePassword = (password) => {
+		const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+		return regex.test(password);
+	};
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = e.target;
-        const name= form.name.value;
-        const photo= form.photo.value;
-        const email= form.email.value;
-        const password= form.password.value;
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const name = form.name.value;
+		const photo = form.photo.value;
+		const email = form.email.value;
+		const password = form.password.value;
 
-        if (!validatePassword(password)) {
-            setError({ ...error, password: 'Password must have an uppercase letter, a lowercase letter, and be at least 6 characters long' });
-            toast.error(error.password);
-            return;
-        }
-        else {
-            setError((prev) => ({ ...prev, password: '' }));
-        }
+		if (!validatePassword(password)) {
+			setError({
+				...error,
+				password:
+					"Password must have an uppercase letter, a lowercase letter, and be at least 6 characters long",
+			});
+			toast.error(error.password);
+			return;
+		} else {
+			setError((prev) => ({ ...prev, password: "" }));
+		}
 
-        createUser(email, password)
-        .then(result => {
-            setUser(result.user)
-            updatedUserProfile({
-                displayName: name, photoURL: photo})
-            .then(()=>{
-                navigate("/")
-            })
-            .catch(err=> err.message)
-        })
-        .catch(err => {
-            toast.error(err.message, 'Registration failed')
-        })
-    }
+		createUser(email, password)
+			.then((result) => {
+				setUser(result.user);
+				updatedUserProfile({
+					displayName: name,
+					photoURL: photo,
+				})
+					.then(() => {
+						// create user entry in the data base
+						const userInfo = {
+							name: name,
+							email: email,
+						};
+						axiosPublic.post("/users", userInfo).then((res) => {
+							if (res.data.insertedId) {
+								Swal.fire({
+									title: "Registered Successfully!",
+									icon: "success",
+									draggable: true,
+								});
+								navigate("/");
+							}
+						});
+					})
+					.catch((err) => err.message);
+			})
+			.catch((err) => {
+				toast.error(err.message, "Registration failed");
+			});
+	};
 
-    const handleGoogle=()=>{
-        signInWithGoogle()
-        .then(result=> {
-            setUser(result.user)
-            navigate(location?.state ? location.state : "/")
-        })
-        .catch(err =>{
-            toast.error(err.message)
-        })
-    }
+	const handleGoogle = () => {
+		signInWithGoogle()
+			.then((result) => {
+				setUser(result.user);
+				navigate(location?.state ? location.state : "/");
+			})
+			.catch((err) => {
+				toast.error(err.message);
+			});
+	};
 
-    return (
+	return (
 		<div className="hero bg-base-200 py-4">
 			<Helmet>
 				<title>Register | Filmverse</title>
