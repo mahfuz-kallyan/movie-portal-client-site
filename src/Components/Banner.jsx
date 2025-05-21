@@ -25,7 +25,7 @@ const Banner = () => {
 				</p>
 				<button
 					onClick={handleSearch}
-					className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300"
+					className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
 				>
 					Explore Movies
 				</button>
