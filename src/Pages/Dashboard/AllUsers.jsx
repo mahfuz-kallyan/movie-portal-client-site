@@ -60,10 +60,10 @@ const AllUsers = () => {
 			</h2>
 			<div className="mt-6">
 				<div className="overflow-x-auto">
-					<table className="table table-zebra">
+					<table className="table table-zebra w-full">
 						<thead>
 							<tr>
-								<th>#</th>
+								<th>No.</th>
 								<th>Name</th>
 								<th>Email</th>
 								<th>Role</th>
